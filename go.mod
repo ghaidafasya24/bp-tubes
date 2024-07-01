@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/aiteung/atdb v0.1.7
 	github.com/aiteung/musik v0.0.5
-	github.com/ghaidafasya24/be-tubes v0.0.7
+	github.com/ghaidafasya24/be-tubes v0.0.9
 	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/whatsauth/whatsauth v0.1.82
 	go.mau.fi/whatsmeow v0.0.0-20240625083845-6acab596dd8c
