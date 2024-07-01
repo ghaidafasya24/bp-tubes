@@ -12,7 +12,6 @@ import (
 	"github.com/ghaidafasya24/bp-tubes/url"
 
 
-	// _ "github.com/ghaidafasya24/ws-ghaida2024/docs"
 	"github.com/gofiber/fiber/v2"
 	
 )
