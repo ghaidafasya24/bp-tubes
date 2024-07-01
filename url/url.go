@@ -4,7 +4,7 @@ import (
 	"github.com/ghaidafasya24/ws-ghaida2024/controller"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/swagger" // swagger handler
+	// "github.com/gofiber/swagger" // swagger handler
 )
 
 func Web(page *fiber.App) {
