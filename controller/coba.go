@@ -4,9 +4,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+
 	"github.com/aiteung/musik"
-	cek "github.com/ghaidafasya24/be-tubes/module"
 	inimodel "github.com/ghaidafasya24/be-tubes/model"
+	cek "github.com/ghaidafasya24/be-tubes/module"
 	"github.com/ghaidafasya24/bp-tubes/config"
 	"github.com/gofiber/fiber/v2"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -20,6 +21,7 @@ func Homepage(c *fiber.Ctx) error {
 
 func GetMenu(c *fiber.Ctx) error {
 	ps := cek.GetAllMenu(config.Ulbimongoconn, "restoran")
+	fmt.Println("Data yang akan dikirim: ", ps) // Tambahkan log ini
 	return c.JSON(ps)
 }
 
@@ -121,7 +123,6 @@ func UpdateData(c *fiber.Ctx) error {
 		"message": "Data successfully updated",
 	})
 }
-
 
 func DeleteMenuByID(c *fiber.Ctx) error {
 	id := c.Params("id")
