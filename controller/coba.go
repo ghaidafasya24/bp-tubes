@@ -54,33 +54,28 @@ func GetMenuID(c *fiber.Ctx) error {
 	return c.JSON(ps)
 }
 
-// func InsertDataMenu(c *fiber.Ctx) error {
-// 	db := config.Ulbimongoconn
-// 	var menurestoran inimodel.Menu
-// 	if err := c.BodyParser(&menurestoran); err != nil {
-// 		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
-// 			"status":  http.StatusInternalServerError,
-// 			"message": err.Error(),
-// 		})
-// 	}
-// 	insertedID, err := cek.InsertMenu(db, "restoran",
-// 	menurestoran.Nama,
-// 	menurestoran.Harga,
-// 	menurestoran.Deskripsi,
-// 	menurestoran.Kategori,
-// 	menurestoran.BahanBaku)
-// 	if err != nil {
-// 		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
-// 			"status":  http.StatusInternalServerError,
-// 			"message": err.Error(),
-// 		})
-// 	}
-// 	return c.Status(http.StatusOK).JSON(fiber.Map{
-// 		"status":      http.StatusOK,
-// 		"message":     "Data berhasil disimpan.",
-// 		"inserted_id": insertedID,
-// 	})
-// }
+func InsertDataMenu(c *fiber.Ctx) error {
+	db := config.Ulbimongoconn
+	var menurestoran inimodel.Menu
+	if err := c.BodyParser(&menurestoran); err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err.Error(),
+		})
+	}
+	insertedID, err := cek.InsertMenu(db, "restoran", menurestoran)
+	if err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err.Error(),
+		})
+	}
+	return c.Status(http.StatusOK).JSON(fiber.Map{
+		"status":      http.StatusOK,
+		"message":     "Data berhasil disimpan.",
+		"inserted_id": insertedID,
+	})
+}
 
 func UpdateData(c *fiber.Ctx) error {
 	db := config.Ulbimongoconn
