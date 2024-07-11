@@ -18,8 +18,8 @@ func Web(page *fiber.App) {
 	page.Options("/", controller.Sink)
 
 	page.Get("/checkip", controller.Homepage) //ujicoba panggil package musik
-	page.Get("/menu", controller.GetMenu)
-	page.Get("/menu/:id", controller.GetMenuID) //menampilkan data menu berdasarkan id
+	page.Get("/restoran", controller.GetMenu)
+	page.Get("/restoran/:id", controller.GetMenuID) //menampilkan data menu berdasarkan id
 	page.Post("/insert", controller.InsertDataMenu)
 	page.Put("/update/:id", controller.UpdateData)
 	page.Delete("/delete/:id", controller.DeleteMenuByID)
