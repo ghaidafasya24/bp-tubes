@@ -26,7 +26,7 @@ func Homepage(c *fiber.Ctx) error {
 // @Accept json
 // @Produce json
 // @Success 200 {object} Menu
-// @Router /menu [get]
+// @Router /restoran [get]
 func GetMenu(c *fiber.Ctx) error {
 	ps := cek.GetAllMenu(config.Ulbimongoconn, "restoran")
 	// fmt.Println("Data yang akan dikirim: ", ps) // Tambahkan log ini
