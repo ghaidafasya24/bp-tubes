@@ -18,7 +18,81 @@ const docTemplate = `{
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
-    "paths": {}
+    "paths": {
+        "/menu": {
+            "get": {
+                "description": "Mengambil semua data menu.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Menu"
+                ],
+                "summary": "Get All Data Menu.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/controller.Menu"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "controller.BahanBaku": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "bahan_baku": {
+                    "type": "string"
+                },
+                "jumlah": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.Kategori": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "kategori": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.Menu": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "bahan_baku": {
+                    "$ref": "#/definitions/controller.BahanBaku"
+                },
+                "deskripsi": {
+                    "type": "string"
+                },
+                "harga": {
+                    "type": "number"
+                },
+                "kategori": {
+                    "$ref": "#/definitions/controller.Kategori"
+                },
+                "nama": {
+                    "type": "string"
+                }
+            }
+        }
+    }
 }`
 
 // SwaggerInfo holds exported Swagger Info so clients can modify it

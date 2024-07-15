@@ -19,9 +19,17 @@ func Homepage(c *fiber.Ctx) error {
 	return c.JSON(ipaddr)
 }
 
+// GetMenu godoc
+// @Summary Get All Data Menu.
+// @Description Mengambil semua data menu.
+// @Tags Menu
+// @Accept json
+// @Produce json
+// @Success 200 {object} Menu
+// @Router /menu [get]
 func GetMenu(c *fiber.Ctx) error {
 	ps := cek.GetAllMenu(config.Ulbimongoconn, "restoran")
-	fmt.Println("Data yang akan dikirim: ", ps) // Tambahkan log ini
+	// fmt.Println("Data yang akan dikirim: ", ps) // Tambahkan log ini
 	return c.JSON(ps)
 }
 

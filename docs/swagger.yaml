@@ -1,4 +1,36 @@
 basePath: /
+definitions:
+  controller.BahanBaku:
+    properties:
+      _id:
+        type: string
+      bahan_baku:
+        type: string
+      jumlah:
+        type: string
+    type: object
+  controller.Kategori:
+    properties:
+      _id:
+        type: string
+      kategori:
+        type: string
+    type: object
+  controller.Menu:
+    properties:
+      _id:
+        type: string
+      bahan_baku:
+        $ref: '#/definitions/controller.BahanBaku'
+      deskripsi:
+        type: string
+      harga:
+        type: number
+      kategori:
+        $ref: '#/definitions/controller.Kategori'
+      nama:
+        type: string
+    type: object
 host: bp-tubes-c48fa88ca6a5.herokuapp.com
 info:
   contact:
@@ -8,7 +40,22 @@ info:
   description: This is a sample swagger for Fiber
   title: TES SWAGGER ULBI
   version: "1.0"
-paths: {}
+paths:
+  /menu:
+    get:
+      consumes:
+      - application/json
+      description: Mengambil semua data menu.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.Menu'
+      summary: Get All Data Menu.
+      tags:
+      - Menu
 schemes:
 - https
 - http
