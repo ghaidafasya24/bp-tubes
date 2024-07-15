@@ -4,6 +4,7 @@ import (
 	"github.com/ghaidafasya24/bp-tubes/controller"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/swagger" // swagger handler
 )
 
 func Web(page *fiber.App) {
@@ -23,4 +24,6 @@ func Web(page *fiber.App) {
 	page.Post("/insert", controller.InsertDataMenu)
 	page.Put("/update/:id", controller.UpdateData)
 	page.Delete("/delete/:id", controller.DeleteMenuByID)
+
+	page.Get("/docs/*", swagger.HandlerDefault)
 }

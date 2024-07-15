@@ -16,6 +16,17 @@ import (
 	
 )
 
+// @title TES SWAGGER ULBI
+// @version 1.0
+// @description This is a sample swagger for Fiber
+
+// @contact.name API Support
+// @contact.url https://github.com/ghaidafasya24
+// @contact.email 714220031@std.ulbi.ac.id
+
+// @host bp-tubes-c48fa88ca6a5.herokuapp.com
+// @BasePath /
+// @schemes https http
 func main() {
 	site := fiber.New(config.Iteung)
 	site.Use(cors.New(config.Cors))
