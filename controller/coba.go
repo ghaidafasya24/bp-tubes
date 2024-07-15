@@ -167,6 +167,17 @@ func UpdateData(c *fiber.Ctx) error {
 	})
 }
 
+// DeleteMenuByID godoc
+// @Summary Delete data menu.
+// @Description Hapus data menu.
+// @Tags Menu
+// @Accept json
+// @Produce json
+// @Param id path string true "Masukan ID"
+// @Success 200
+// @Failure 400
+// @Failure 500
+// @Router /delete/{id} [delete]
 func DeleteMenuByID(c *fiber.Ctx) error {
 	id := c.Params("id")
 	if id == "" {
