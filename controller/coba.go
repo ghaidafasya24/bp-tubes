@@ -208,3 +208,4 @@ func DeleteMenuByID(c *fiber.Ctx) error {
 		"message": fmt.Sprintf("Data with id %s deleted successfully", id),
 	})
 }
+
