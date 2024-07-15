@@ -76,6 +76,17 @@ func GetMenuID(c *fiber.Ctx) error {
 	return c.JSON(ps)
 }
 
+// InsertDataMenu godoc
+// @Summary Insert data menu.
+// @Description Input data menu.
+// @Tags Menu
+// @Accept json
+// @Produce json
+// @Param request body Menu true "Payload Body [RAW]"
+// @Success 200 {object} Menu
+// @Failure 400
+// @Failure 500
+// @Router /insert [post]
 func InsertDataMenu(c *fiber.Ctx) error {
 	db := config.Ulbimongoconn
 	var menurestoran inimodel.Menu
