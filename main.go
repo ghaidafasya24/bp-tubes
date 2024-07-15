@@ -13,6 +13,7 @@ import (
 
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/ghaidafasya24/bp-tubes/docs"
 	
 )
 
