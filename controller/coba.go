@@ -33,6 +33,18 @@ func GetMenu(c *fiber.Ctx) error {
 	return c.JSON(ps)
 }
 
+// GetMenuID godoc
+// @Summary Get By ID Data Menu.
+// @Description Ambil per ID data menu.
+// @Tags Menu
+// @Accept json
+// @Produce json
+// @Param id path string true "Masukan ID"
+// @Success 200 {object} Menu
+// @Failure 400
+// @Failure 404
+// @Failure 500
+// @Router /restoran/{id} [get]
 func GetMenuID(c *fiber.Ctx) error {
 	id := c.Params("id")
 	if id == "" {
