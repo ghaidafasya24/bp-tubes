@@ -19,7 +19,7 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/menu": {
+        "/restoran": {
             "get": {
                 "description": "Mengambil semua data menu.",
                 "consumes": [

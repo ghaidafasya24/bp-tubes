@@ -41,7 +41,7 @@ info:
   title: TES SWAGGER ULBI
   version: "1.0"
 paths:
-  /menu:
+  /restoran:
     get:
       consumes:
       - application/json

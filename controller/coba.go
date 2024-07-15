@@ -29,7 +29,7 @@ func Homepage(c *fiber.Ctx) error {
 // @Router /restoran [get]
 func GetMenu(c *fiber.Ctx) error {
 	ps := cek.GetAllMenu(config.Ulbimongoconn, "restoran")
-	// fmt.Println("Data yang akan dikirim: ", ps) // Tambahkan log ini
+	fmt.Println("Data yang akan dikirim: ", ps) // Tambahkan log ini
 	return c.JSON(ps)
 }
 
