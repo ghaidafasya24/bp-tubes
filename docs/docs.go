@@ -129,13 +129,16 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "_id": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "123456789"
                 },
                 "bahan_baku": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Beras"
                 },
                 "jumlah": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "1"
                 }
             }
         },
@@ -143,10 +146,12 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "_id": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "123456789"
                 },
                 "kategori": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Makanan"
                 }
             }
         },
@@ -154,22 +159,26 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "_id": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "123456789"
                 },
                 "bahan_baku": {
                     "$ref": "#/definitions/controller.BahanBaku"
                 },
                 "deskripsi": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Nasi goreng dengan campuran sayuran dan ayam"
                 },
                 "harga": {
-                    "type": "number"
+                    "type": "number",
+                    "example": 15000
                 },
                 "kategori": {
                     "$ref": "#/definitions/controller.Kategori"
                 },
                 "nama": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Nasi Goreng"
                 }
             }
         }

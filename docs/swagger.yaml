@@ -3,32 +3,41 @@ definitions:
   controller.BahanBaku:
     properties:
       _id:
+        example: "123456789"
         type: string
       bahan_baku:
+        example: Beras
         type: string
       jumlah:
+        example: "1"
         type: string
     type: object
   controller.Kategori:
     properties:
       _id:
+        example: "123456789"
         type: string
       kategori:
+        example: Makanan
         type: string
     type: object
   controller.Menu:
     properties:
       _id:
+        example: "123456789"
         type: string
       bahan_baku:
         $ref: '#/definitions/controller.BahanBaku'
       deskripsi:
+        example: Nasi goreng dengan campuran sayuran dan ayam
         type: string
       harga:
+        example: 15000
         type: number
       kategori:
         $ref: '#/definitions/controller.Kategori'
       nama:
+        example: Nasi Goreng
         type: string
     type: object
 host: bp-tubes-c48fa88ca6a5.herokuapp.com
