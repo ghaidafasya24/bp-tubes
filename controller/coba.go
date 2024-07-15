@@ -82,7 +82,7 @@ func GetMenuID(c *fiber.Ctx) error {
 // @Tags Menu
 // @Accept json
 // @Produce json
-// @Param request body Menu true "Payload Body [RAW]"
+// @Param request body ReqMenu true "Payload Body [RAW]"
 // @Success 200 {object} Menu
 // @Failure 400
 // @Failure 500

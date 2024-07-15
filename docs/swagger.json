@@ -37,7 +37,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/controller.Menu"
+                            "$ref": "#/definitions/controller.ReqMenu"
                         }
                     }
                 ],
@@ -132,11 +132,11 @@
                 },
                 "bahan_baku": {
                     "type": "string",
-                    "example": "Beras"
+                    "example": "Nasi, Bumbu, Ayam"
                 },
                 "jumlah": {
                     "type": "string",
-                    "example": "1"
+                    "example": "3"
                 }
             }
         },
@@ -173,6 +173,51 @@
                 },
                 "kategori": {
                     "$ref": "#/definitions/controller.Kategori"
+                },
+                "nama": {
+                    "type": "string",
+                    "example": "Nasi Goreng"
+                }
+            }
+        },
+        "controller.ReqBahanBaku": {
+            "type": "object",
+            "properties": {
+                "bahan_baku": {
+                    "type": "string",
+                    "example": "Nasi, Bumbu, Ayam"
+                },
+                "jumlah": {
+                    "type": "string",
+                    "example": "3"
+                }
+            }
+        },
+        "controller.ReqKategori": {
+            "type": "object",
+            "properties": {
+                "kategori": {
+                    "type": "string",
+                    "example": "Makanan"
+                }
+            }
+        },
+        "controller.ReqMenu": {
+            "type": "object",
+            "properties": {
+                "bahan_baku": {
+                    "$ref": "#/definitions/controller.ReqBahanBaku"
+                },
+                "deskripsi": {
+                    "type": "string",
+                    "example": "Nasi goreng dengan campuran sayuran dan ayam"
+                },
+                "harga": {
+                    "type": "number",
+                    "example": 15000
+                },
+                "kategori": {
+                    "$ref": "#/definitions/controller.ReqKategori"
                 },
                 "nama": {
                     "type": "string",

@@ -6,10 +6,10 @@ definitions:
         example: "123456789"
         type: string
       bahan_baku:
-        example: Beras
+        example: Nasi, Bumbu, Ayam
         type: string
       jumlah:
-        example: "1"
+        example: "3"
         type: string
     type: object
   controller.Kategori:
@@ -40,6 +40,37 @@ definitions:
         example: Nasi Goreng
         type: string
     type: object
+  controller.ReqBahanBaku:
+    properties:
+      bahan_baku:
+        example: Nasi, Bumbu, Ayam
+        type: string
+      jumlah:
+        example: "3"
+        type: string
+    type: object
+  controller.ReqKategori:
+    properties:
+      kategori:
+        example: Makanan
+        type: string
+    type: object
+  controller.ReqMenu:
+    properties:
+      bahan_baku:
+        $ref: '#/definitions/controller.ReqBahanBaku'
+      deskripsi:
+        example: Nasi goreng dengan campuran sayuran dan ayam
+        type: string
+      harga:
+        example: 15000
+        type: number
+      kategori:
+        $ref: '#/definitions/controller.ReqKategori'
+      nama:
+        example: Nasi Goreng
+        type: string
+    type: object
 host: bp-tubes-c48fa88ca6a5.herokuapp.com
 info:
   contact:
@@ -61,7 +92,7 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/controller.Menu'
+          $ref: '#/definitions/controller.ReqMenu'
       produces:
       - application/json
       responses:
