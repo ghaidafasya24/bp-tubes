@@ -110,6 +110,18 @@ func InsertDataMenu(c *fiber.Ctx) error {
 	})
 }
 
+// UpdateData godoc
+// @Summary Update data menu.
+// @Description Ubah data menu.
+// @Tags Menu
+// @Accept json
+// @Produce json
+// @Param id path string true "Masukan ID"
+// @Param request body ReqMenu true "Payload Body [RAW]"
+// @Success 200 {object} Menu
+// @Failure 400
+// @Failure 500
+// @Router /update/{id} [put]
 func UpdateData(c *fiber.Ctx) error {
 	db := config.Ulbimongoconn
 
