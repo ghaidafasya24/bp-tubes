@@ -152,6 +152,7 @@ func UpdateData(c *fiber.Ctx) error {
 		menurestoran.Nama,
 		menurestoran.Harga,
 		menurestoran.Deskripsi,
+		menurestoran.Gambar,
 		menurestoran.Kategori,
 		menurestoran.BahanBaku)
 	if err != nil {
@@ -208,4 +209,3 @@ func DeleteMenuByID(c *fiber.Ctx) error {
 		"message": fmt.Sprintf("Data with id %s deleted successfully", id),
 	})
 }
-

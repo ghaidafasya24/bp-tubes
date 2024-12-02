@@ -1,11 +1,13 @@
 module github.com/ghaidafasya24/bp-tubes
 
-go 1.20
+go 1.21
+
+toolchain go1.23.3
 
 require (
 	github.com/aiteung/atdb v0.1.7
 	github.com/aiteung/musik v0.0.5
-	github.com/ghaidafasya24/be-tubes v0.0.10
+	github.com/ghaidafasya24/be-tubes v0.0.11
 	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/gofiber/swagger v1.1.0
 	github.com/swaggo/swag v1.16.3
